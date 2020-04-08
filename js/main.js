@@ -100,4 +100,17 @@ $(document).ready(function(){
             $('#reloj').html(reloj)
         },1000)
     }
+
+    //Validacion de campos (jQuery Form Validator)
+    if(window.location.href.indexOf('contact') > -1 ){
+        $("form input[name='date']").datepicker({
+            dateFormat: 'dd-mm-yy'
+        })
+        
+        $.validate({
+            lang: 'es',
+            errorMessagePosition: 'top',
+            scrollToTopOnError: true
+        });
+    }
 })
